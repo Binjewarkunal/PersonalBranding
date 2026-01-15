@@ -3,44 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kunal Binjewar — Strategy, Analysis & Clarity</title>
-  <meta name="description" content="Strategy, business analysis, GenAI, and advisory support for founders and professionals."/>
+  <title>Kunal Binjewar — Strategy, Analysis & Advisory</title>
+  <meta name="description" content="Consulting, strategy, GenAI, and advisory support for founders and professionals."/>
 
   <style>
     :root {
-      --bg:#0b0d10; --fg:#f5f5f5; --muted:#b3b3b3;
-      --accent:#7a7f87; --card:#12151a; --border:#1c1f26;
+      --bg:#0b0d10;
+      --fg:#f5f5f5;
+      --muted:#b3b3b3;
+      --accent:#7a7f87;
+      --card:#12151a;
+      --border:#1c1f26;
     }
 
     * { box-sizing:border-box; margin:0; padding:0; }
 
     body {
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial;
-      background:var(--bg); color:var(--fg); line-height:1.6;
+      background:var(--bg);
+      color:var(--fg);
+      line-height:1.6;
     }
 
-    .container { max-width:1100px; margin:auto; padding:80px 24px; }
+    .container {
+      max-width:1100px;
+      margin:auto;
+      padding:80px 24px;
+    }
+
     header { padding:120px 0; }
 
-    h1 { font-size:clamp(2.2rem,4vw,3.2rem); max-width:760px; }
+    h1 {
+      font-size:clamp(2.2rem,4vw,3.2rem);
+      max-width:760px;
+    }
+
     h2 { font-size:1.6rem; margin-bottom:24px; }
     h3 { font-size:1.1rem; margin-bottom:8px; }
 
     p { color:var(--muted); max-width:760px; }
 
-    .btn {
-      display:inline-block; padding:12px 22px; border-radius:6px;
-      border:1px solid var(--accent); color:var(--fg);
-      text-decoration:none; transition:.2s;
-    }
-    .btn.primary { background:var(--fg); color:var(--bg); border-color:var(--fg); }
-    .btn:hover { transform:translateY(-1px); }
-
     section { margin-bottom:120px; }
+
+    .btn {
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:6px;
+      border:1px solid var(--accent);
+      color:var(--fg);
+      text-decoration:none;
+      transition:.2s;
+    }
+
+    .btn.primary {
+      background:var(--fg);
+      color:var(--bg);
+      border-color:var(--fg);
+    }
+
+    .btn:hover { transform:translateY(-1px); }
 
     .grid {
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
       gap:32px;
       margin-top:40px;
     }
@@ -52,7 +77,33 @@
       padding:28px;
     }
 
-    footer { border-top:1px solid var(--border); padding:60px 24px; }
+    .price {
+      font-size:2rem;
+      margin:16px 0;
+    }
+
+    .currency-toggle {
+      margin:32px 0;
+    }
+
+    .currency-toggle button {
+      background:none;
+      border:1px solid var(--border);
+      color:var(--fg);
+      padding:8px 14px;
+      margin-right:8px;
+      cursor:pointer;
+    }
+
+    .currency-toggle button.active {
+      background:var(--fg);
+      color:var(--bg);
+    }
+
+    footer {
+      border-top:1px solid var(--border);
+      padding:60px 24px;
+    }
   </style>
 </head>
 
@@ -60,63 +111,116 @@
 
 <header class="container">
   <h1>I help founders and professionals think clearly, decide better, and grow with intent.</h1>
-  <p>Strategy, business analysis, GenAI, and advisory support — focused on clarity and outcomes.</p>
+  <p>Strategy, business analysis, GenAI, and advisory support — delivered with clarity.</p>
 
   <div style="margin-top:32px;">
-    <a href="#pricing" class="btn primary">Pay & Book</a>
-    <a href="#contact" class="btn">Request Conversation</a>
+    <a href="#pricing" class="btn primary">View Pricing</a>
+    <a href="#contact" class="btn">Contact</a>
   </div>
 </header>
 
 <section class="container">
   <h2>What I Do</h2>
   <div class="grid">
-    <div class="card"><h3>Business Analysis & Strategy</h3><p>Structured thinking for complex decisions.</p></div>
-    <div class="card"><h3>Market & Competitor Research</h3><p>Signal-driven insights, not guesswork.</p></div>
-    <div class="card"><h3>Startup Consulting</h3><p>Early-stage clarity and direction.</p></div>
-    <div class="card"><h3>LinkedIn Ghostwriting</h3><p>Credibility-driven content for founders.</p></div>
-    <div class="card"><h3>GenAI Advisory</h3><p>Practical workflows, not hype.</p></div>
-    <div class="card"><h3>Thinking Partner</h3><p>Calm, honest perspective when it matters.</p></div>
+    <div class="card"><h3>Business Strategy</h3><p>Clarity before execution.</p></div>
+    <div class="card"><h3>Market Research</h3><p>Signal-driven insights.</p></div>
+    <div class="card"><h3>Startup Advisory</h3><p>Early-stage thinking support.</p></div>
+    <div class="card"><h3>GenAI Consulting</h3><p>Practical AI leverage.</p></div>
+    <div class="card"><h3>LinkedIn Ghostwriting</h3><p>Credibility-focused content.</p></div>
+    <div class="card"><h3>Thinking Partner</h3><p>Honest, structured perspective.</p></div>
   </div>
 </section>
 
-<!-- 🔥 PRICING SECTION -->
+<!-- PRICING -->
 <section class="container" id="pricing">
   <h2>Pricing</h2>
-  <p>Clear, simple, and intentional. No hidden commitments.</p>
+  <p>Simple, transparent, and designed for serious conversations.</p>
+
+  <div class="currency-toggle">
+    <button class="active" onclick="setCurrency('inr')">India (INR)</button>
+    <button onclick="setCurrency('usd')">International (USD)</button>
+  </div>
 
   <div class="grid">
-    <div class="card">
+
+    <!-- DISCOVERY -->
+    <div class="card price-card" data-inr="₹999" data-usd="$25"
+         data-link-inr="https://rzp.io/i/YOUR_RAZORPAY_LINK_DISCOVERY"
+         data-link-usd="https://rzp.io/i/YOUR_RAZORPAY_LINK_DISCOVERY">
       <h3>Discovery Call</h3>
-      <p style="font-size:2rem; margin:16px 0;">₹999</p>
+      <div class="price">₹999</div>
       <p>
         • 30-minute 1:1 call<br>
-        • Structured discussion<br>
-        • Clarity on next steps<br>
-        • No upsell pressure
+        • Problem clarification<br>
+        • Next-step guidance
       </p>
-
-      <a href="https://rzp.io/i/YOUR_RAZORPAY_PAYMENT_LINK"
-         class="btn primary" style="margin-top:20px;">
-        Pay & Book
-      </a>
+      <a href="#" class="btn primary pay-btn">Pay & Book</a>
     </div>
+
+    <!-- STRATEGY -->
+    <div class="card price-card" data-inr="₹2,999" data-usd="$75"
+         data-link-inr="https://rzp.io/i/YOUR_RAZORPAY_LINK_STRATEGY"
+         data-link-usd="https://rzp.io/i/YOUR_RAZORPAY_LINK_STRATEGY">
+      <h3>Strategy Deep Dive</h3>
+      <div class="price">₹2,999</div>
+      <p>
+        • 60-minute deep session<br>
+        • Structured analysis<br>
+        • Actionable insights
+      </p>
+      <a href="#" class="btn primary pay-btn">Pay & Book</a>
+    </div>
+
+    <!-- ADVISORY -->
+    <div class="card price-card" data-inr="₹6,999" data-usd="$175"
+         data-link-inr="https://rzp.io/i/YOUR_RAZORPAY_LINK_ADVISORY"
+         data-link-usd="https://rzp.io/i/YOUR_RAZORPAY_LINK_ADVISORY">
+      <h3>Advisory Session</h3>
+      <div class="price">₹6,999</div>
+      <p>
+        • High-context advisory<br>
+        • Strategic direction<br>
+        • Best for founders & CEOs
+      </p>
+      <a href="#" class="btn primary pay-btn">Pay & Book</a>
+    </div>
+
   </div>
 </section>
 
-<!-- FREE CONTACT -->
 <section class="container" id="contact">
-  <h2>Request a Conversation</h2>
-  <p>If you’re unsure or want to start with context-sharing, reach out here.</p>
-
-  <p style="margin-top:16px;">
-    Email: <a href="mailto:binjewarkunal@gmail.com">binjewarkunal@gmail.com</a>
-  </p>
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:binjewarkunal@gmail.com">binjewarkunal@gmail.com</a></p>
 </section>
 
 <footer class="container">
   <p>© Kunal Binjewar</p>
 </footer>
+
+<script>
+  let currency = 'inr';
+
+  function setCurrency(type) {
+    currency = type;
+
+    document.querySelectorAll('.currency-toggle button')
+      .forEach(btn => btn.classList.remove('active'));
+
+    document.querySelector(
+      `.currency-toggle button[onclick="setCurrency('${type}')"]`
+    ).classList.add('active');
+
+    document.querySelectorAll('.price-card').forEach(card => {
+      card.querySelector('.price').innerText = card.dataset[type];
+      card.querySelector('.pay-btn').href = card.dataset['link-' + type];
+    });
+  }
+
+  // init buttons
+  document.querySelectorAll('.price-card').forEach(card => {
+    card.querySelector('.pay-btn').href = card.dataset.linkInr;
+  });
+</script>
 
 </body>
 </html>
