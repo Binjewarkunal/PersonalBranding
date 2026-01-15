@@ -131,6 +131,23 @@
   </div>
 </section>
 
+<!-- HOW I WORK -->
+<section class="container">
+  <h2>How I Work</h2>
+  <p>
+    I work in a structured but flexible way.
+  </p>
+  <p>
+    First, I focus on understanding context — the problem, constraints, and what actually matters.
+    Then, I break things down into clear parts so the situation feels manageable, not overwhelming.
+  </p>
+  <p>
+    From there, we focus on decisions and next steps.
+    No jargon, no rushed answers, and no pretending to have all the answers.
+    Just clear thinking, honest discussion, and forward movement.
+  </p>
+</section>
+
 <!-- PRICING -->
 <section class="container" id="pricing">
   <h2>Pricing</h2>
@@ -143,7 +160,6 @@
 
   <div class="grid">
 
-    <!-- DISCOVERY -->
     <div class="card price-card" data-inr="₹999" data-usd="$25"
          data-link-inr="https://rzp.io/i/YOUR_RAZORPAY_LINK_DISCOVERY"
          data-link-usd="https://rzp.io/i/YOUR_RAZORPAY_LINK_DISCOVERY">
@@ -157,7 +173,6 @@
       <a href="#" class="btn primary pay-btn">Pay & Book</a>
     </div>
 
-    <!-- STRATEGY -->
     <div class="card price-card" data-inr="₹2,999" data-usd="$75"
          data-link-inr="https://rzp.io/i/YOUR_RAZORPAY_LINK_STRATEGY"
          data-link-usd="https://rzp.io/i/YOUR_RAZORPAY_LINK_STRATEGY">
@@ -171,7 +186,6 @@
       <a href="#" class="btn primary pay-btn">Pay & Book</a>
     </div>
 
-    <!-- ADVISORY -->
     <div class="card price-card" data-inr="₹6,999" data-usd="$175"
          data-link-inr="https://rzp.io/i/YOUR_RAZORPAY_LINK_ADVISORY"
          data-link-usd="https://rzp.io/i/YOUR_RAZORPAY_LINK_ADVISORY">
@@ -216,7 +230,6 @@
     });
   }
 
-  // init buttons
   document.querySelectorAll('.price-card').forEach(card => {
     card.querySelector('.pay-btn').href = card.dataset.linkInr;
   });
